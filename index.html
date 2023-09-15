@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="loginPage" class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">Login</h2>
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+            </form>
+            <div class="mt-3">
+                <a href="forget.html" style="text-decoration: none;" onclick="showForgotPasswordPage()">Forgot Password?</a>
+                <span class="mx-2">|</span>
+                <a href="register.html" style="text-decoration: none;" onclick="showRegisterPage()">Register</a>
+            </div>
+            <p style="text-align: center;">or sign up with:</p>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-google"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-apple"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div id="registerPage" class="container mt-5" style="display: none;">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">Create Account</h2>
+            <form id="registerForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirmpassword</label>
+                    <input type="confirmPassword" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label>
+                    <input type="gender" class="form-control" id="email" name="email" required>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="register()">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="forgotPasswordPage" class="container mt-5" style="display: none;">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">Forgot Password</h2>
+                <p>Enter your email below, and we'll send you a password reset link.</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <a href="send_rest_link.php" class="btn btn-primary">Reset Password</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function login() {
+        alert("Login clicked");
+    }
+
+    function register() {
+        alert("Register clicked");
+    }
+
+    function resetPassword() {
+        alert("Reset Password clicked");
+    }
+
+    function showLoginPage() {
+        document.getElementById("loginPage").style.display = "block";
+    }
+
+    function showRegisterPage() {
+        document.getElementById("registerPage").style.display = "block";
+    }
+
+    function showForgotPasswordPage() {
+        document.getElementById("forgotPasswordPage").style.display = "block";
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

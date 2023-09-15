@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">Forgot Password</h2>
+                <p>Enter your email below, and we'll send you a password reset link.</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <a href="send_rest_link.php" class="btn btn-primary">Reset Password</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function resetPassword() {
+        alert("Reset Password clicked");
+    }
+    function showForgotPasswordPage() {
+        document.getElementById("forgotPasswordPage").style.display = "block";
+    }
+    </script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
